@@ -15,6 +15,7 @@ iris_df.columns=['sepal_len', 'sepal_wid', 'petal_len', 'petal_wid', 'class']
 cleaned_data = iris_df.dropna(how="all", inplace=True) # remove any empty lines
 print("Number of missing data in the dataset:")
 print(iris_df.isnull().sum()) # count the number of missing data
+iris_df.drop_duplicates(inplace=True)
 print("Mean of the dataset:")
 print(iris_df.mean()) # calculate the mean of the data
 
